@@ -1,23 +1,19 @@
 <?php
+require_once('config.php');
 
-function MailRoom($nameTo, $emailTo, $onderwerp, $tekst)
-{
-    // Basis sanity checks tegen header injection
-    $emailTo   = filter_var($emailTo, FILTER_VALIDATE_EMAIL);
-    $onderwerp = str_replace(["\r", "\n"], '', (string)$onderwerp);
-
-    if (!$emailTo) {
-        return false;
-    }
-
-    $headers  = "From: JobHulp Culemborg <no-reply@jobhulpculemborg.nl>\r\n";
-    $headers .= "Reply-To: no-reply@jobhulpculemborg.nl\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-
-    return mail($emailTo, $onderwerp, $tekst, $headers);
-}
+  if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
+      die('Ongeldige aanvraag.');
+  }
+  $captcha_a = $_SESSION['captcha_a'] ?? 0;
+  $captcha_b = $_SESSION['captcha_b'] ?? 0;
+  $captcha_antwoord = (int) ($_POST['captcha'] ?? -1);
   
+  if ($captcha_antwoord !== ($captcha_a + $captcha_b)) {
+      // Fout antwoord — stuur terug
+      header('Location: index.php?resc=3#contact');
+      exit;
+  }
+
   /*****
   ******  Hier start het prog
   *****/
@@ -26,30 +22,24 @@ function MailRoom($nameTo, $emailTo, $onderwerp, $tekst)
     header('location: index.php?resc=2#contact');
     exit(); 
   }
-  $nameFrom = $_POST['name'];
-  $emailFrom = $_POST['email'];
+  $nameTo = $_POST['name'];
+  $emailTo = $_POST['email'];
   $subject = $_POST['subject'];
-
-  $message = 'Beste ' . $nameFrom . "<br/><br/>";
-  $message .= 'Je hebt het volgende bericht naar JobHulp Culemborg verzonden:<br/><br/>Onderwerp:<br/><br/>';
+  $message = 'Beste ' . $nameTo . "<br/><br/>";
+  $message .= 'Je hebt het volgende bericht naar ' . LOC_NAME . ' verzonden:<br/><br/>Onderwerp:<br/><br/>';
   $message .= $_POST['subject'];
   $message .= '<br/><br/>Tekst:<br/><br/>';
   $message .= $_POST['message'];
   $message .= "<br/><br/>" . 'Wij zullen zo spoedig mogelijk antwoorden op uw vraag of opmerking.';
   $message .= "<br/><br/>" . 'Met vriendelijke groeten,';
-  $message .= "<br/>JobHulp Culemborg";
+  $message .= "<br/>" . LOC_NAME;
   
-  if (!MailRoom ($nameFrom, $emailFrom, $subject, $message))
-  {
-    header('location: index.php?resc=1#contact');
-    exit(); 
-  }
+  Tools::MailRoom ($nameTo, $emailTo, $subject, $message);  
   
-  $receiving_email_address = 'info@jobhulpculemborg.nl';
-
-  $message = $nameFrom . ' (' . $emailFrom . ') heeft het volgende bericht verzonden:' . "<br/><br/>";
+  $receiving_email_address = 'info@' . LOC_DOMAIN_PUB;
+  $message = $nameTo . ' (' . $emailTo . ') heeft het volgende bericht verzonden:' . "<br/><br/>";
   $message .= $_POST['message'];
-  MailRoom ($receiving_email_address, $receiving_email_address , $subject, $message);
+  Tools::MailRoom ($receiving_email_address, $receiving_email_address , $subject, $message);
   header('location: index.php?resc=0#contact');
   exit(); 
   

@@ -40,15 +40,15 @@ require_once 'config.php';
         <div class="section-title">
           <h2>Wat is onze missie?</h2>
           <h3>En wat zijn onze drijfveren?</h3>
-          <p>Het verliezen van je baan gaat je niet in de koude kleren zitten. Je verliest niet alleen je collega’s, dagritme en een stuk inkomen, maar ook een heel stuk doel, zin en richting in je leven. Het is niet altijd makkelijk om op eigen kracht een nieuwe baan te vinden.</p> 
-          <p>Tegen deze achtergrond is JobHulp Culemborg  in 2015 opgericht voor en door werkzoekenden. Onze missie is mensen concreet verder te helpen op weg naar vrijwilligerswerk of betaald werk, waardoor ze weer kunnen deelnemen aan de maatschappij en arbeidsmarkt. Wij willen we opkomen voor mensen die een steuntje in de rug kunnen gebruiken. Iedereen mag zich geliefd weten en voelen op basis van zijn eigen persoon, talent en mogelijkheden. Via onze JobGroepen en JobMaatjes bieden wij persoonlijke aandacht en ondersteuning op maat, en wij hebben zorg voor ieders’ individuele kwaliteiten en behoeften.</p>
-          <p>JobHulp Culemborg is een vrijwilligersorganisatie en onze getrainde en gecertificeerde vrijwilligers gaan kosteloos als JobMaatje aan de slag middels 1-op-1 begeleiding. Het doel is om mensen weer in hun kracht te zetten. willen we opkomen voor mensen die een steuntje in de rug kunnen gebruiken. Iedereen mag zich geliefd weten en voelen op basis van zijn eigen persoon, talent en mogelijkheden.</p>
+          <p>Het verliezen van een baan is voor veel mensen een ingrijpende ervaring. Opeens heb je geen collega’s meer, geen dagritme en vervalt een deel van je inkomen. Daarnaast ervaren mensen ook verlies van doel en richting in het leven. Het is vervolgens niet altijd gemakkelijk om op eigen kracht een nieuwe baan te vinden.</p> 
+          <p>Tegen deze achtergrond is JobHulp Culemborg in 2015 opgericht voor en door werkzoekenden. Onze missie is mensen concreet verder te helpen op weg naar vrijwilligerswerk of betaald werk, waardoor ze weer kunnen deelnemen aan de maatschappij en arbeidsmarkt. Wij komen op voor mensen die een steuntje in de rug kunnen gebruiken. Via onze JobGroepen en JobMaatjes bieden wij intensieve persoonlijke aandacht en ondersteuning op maat, en wij hebben zorg voor ieders’ individuele talenten, kwaliteiten en behoeften.</p>
+          <p>JobHulp Culemborg is een vrijwilligersorganisatie en onze getrainde en gecertificeerde vrijwilligers gaan kosteloos als JobMaatje aan de slag middels 1-op-1 begeleiding. Het doel is om mensen weer in hun kracht te zetten.</p>
         </div>
       </div>
     </section>
     
     <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq" class="section-two faq">
+    <!-- <section id="faq" class="section-two faq">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -65,8 +65,7 @@ require_once 'config.php';
                 <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Wat doet <?= LOC_NAME ?>?<i class="bi bi-caret-down-square icon-show"></i><i class="bi bi-caret-up-square icon-close"></i></div>
                 <div id="faq1" class="collapse" data-bs-parent=".faq-list">
                   <p>
-                    JobHulp Culemborg is een organisatie die bestaat uit mensen die op vrijwillige basis andere mensen (hulpzoekers) bijstaan bij het zoeken naar een baan
-                    of vervangend zinvolle arbeid (zoals een vrijwilligersbetrekking of een studie).</p>
+                    JobHulp Culemborg is een organisatie die bestaat uit mensen die op vrijwillige basis andere mensen (werkzoekenden) bijstaan bij het zoeken naar een baan of vervangend zinvolle arbeid (zoals vrijwilligerswerk of een studie).</p>
                 </div>
               </li>
 

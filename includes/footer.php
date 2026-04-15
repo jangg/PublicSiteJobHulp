@@ -39,8 +39,6 @@
 						<li><i class="bi bi-caret-right-square"></i> <a href="/index.php#maatje">JobMaatjes begeleiding</a></li>
 						<li><i class="bi bi-caret-right-square"></i> <a href="#">JobGroep training</a></li>
 						<li><i class="bi bi-caret-right-square"></i> <a href="#">Stap in vrijwilligerswerk</a></li>
-						<!-- <li><i class="bi bi-caret-right-square"></i>&nbsp;&nbsp;&nbsp;Lezingen</li>
-						<li><i class="bi bi-caret-right-square"></i> <a href="<?= LOC_WEBSITE ?>#contact">Inloopspreekuur</a></li> -->
 					</ul>
 				</div>
 
@@ -48,8 +46,8 @@
 					<h4>Onze Social Media</h4>
 					<p>Volg ons op de belangrijkste social media</p>
 					<div class="social-links my-3">
-						<a href="#" class="facebook"><i class="bx bxl-facebook" style="background-color: white;"></i></a>
-						<a href="#" class="linkedin"><i class="bx bxl-linkedin" style="background-color: white;"></i></i></a>
+						<a href="https://www.facebook.com/jobhulp" class="facebook"><i class="bx bxl-facebook" style="background-color: white;"></i></a>
+						<a href="https://www.linkedin.com/company/110410941" class="linkedin"><i class="bx bxl-linkedin" style="background-color: white;"></i></i></a>
 					</div>
 					<br /><br />
 					<div class="row">
@@ -80,26 +78,24 @@
   <p>
 	Deze website gebruikt alleen cookies voor analyse en een optimale werking.
 	Door op "Akkoord" te klikken geef je toestemming voor het plaatsen van cookies.
-	<a href="/privacyverklaring" target="_blank">Lees meer</a>
+	<a href="/privacy.php" target="_blank">Lees meer</a>
   </p>
   <button id="cookie-accept">Akkoord</button>
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
-  function loadGA() {
-    var gtag = document.createElement('script');
-    // gtag.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
-    gtag.async = true;
-    document.head.appendChild(gtag);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    window.gtag = gtag;
-
-    gtag('js', new Date());
-    // gtag('config', 'G-XXXXXXXXXX');
-  }
+	function loadGA() {
+		var gtagscript = document.createElement('script');
+		gtagscript.src = "https://www.googletagmanager.com/gtag/js?id=G-PZCYRS9PGQ";
+		gtagscript.async = true;
+		document.head.appendChild(gtagscript);
+		
+		window.dataLayer = window.dataLayer || [];
+		window.gtag = function(){ dataLayer.push(arguments); };
+		window.gtag('js', new Date());
+		window.gtag('config', 'G-PZCYRS9PGQ');
+	}
 
   if (localStorage.getItem("cookieConsent") === "true") {
     loadGA();

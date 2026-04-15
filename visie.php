@@ -46,8 +46,8 @@ require_once 'config.php';
         <div class="section-title">
           <h2>Wat doen we?</h2>
           <h3>En hoe doen wij het dan?</h3>
-          <p>JobHulp Culemborg steunt mensen die werkzoekend zijn of zich niet meer thuis voelen in hun huidige baan. Het doel is om de zelfredzaamheid, onafhankelijkheid en de bemiddelbaarheid op de arbeidsmarkt te verhogen. JobHulp Culemborg werkt aanvullend op en in samenwerking met bestaande werkbegeleidings- en re-integratietrajecten door werkzoekenden, mens- en doelgericht bij te staan.</p>
-          <p>Om dit te kunnen doen leidt JobHulp Culemborg al sinds 2015 vrijwilliers op tot JobMaatje,  zodat zij werkzoekenden kunnen ondersteunen die meer tijd en aandacht nodig hebben. Zo wordt de maatschappelijke betrokkenheid op lokaal niveau vergroot. Bovendien worden kosten van gemeentelijke diensten, uitkeringsinstanties en werkgevers verlaagd.</p>
+          <p>JobHulp Culemborg werkt aanvullend op en in samenwerking met bestaande werkbegeleidingsorganisaties en re-integratieorganisaties als het UWV en Werkzaak Rivierenland. Het onderscheidend vermogen van JobHulp Culemborg is gelegen in het feit dat wij werkzoekenden een veel intensievere en persoonlijker begeleiding kunnen aanbieden</p>
+          <p>Om dit mogelijk te maken, leidt JobHulp Culemborg vrijwilligers op tot JobMaatje, zodat zij werkzoekenden kunnen ondersteunen die meer tijd nodig hebben. Zo wordt de maatschappelijke betrokkenheid op lokaal niveau vergroot. Bovendien worden kosten van gemeentelijke diensten, uitkeringsinstanties en werkgevers verlaagd.</p>
           <p>JobHulp Culemborg biedt sociale, communicatieve en praktische ondersteuning en vergroot daarmee de kansen van werkzoekenden, die belemmeringen ervaren bij het vinden van werk.</p>
         </div>
       </div>
@@ -70,15 +70,13 @@ require_once 'config.php';
               <li>
                 <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Wat doet JobHulp Culemborg wel en wat doet ze niet<i class="bi bi-caret-down-square icon-show"></i><i class="bi bi-caret-up-square icon-close"></i></div>
                 <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                  <p><?= LOC_NAME ?> helpt mensen bij het zoeken naar werk. Wij bieden daarbij ondersteuning op gebied van het verkrijgen van zelfkennis en vaardigheden, zoals een goede CV maken, goed voor de dag komen op Social Media, jezelf presenteren, etc.</p>
-                  <p>Kortom, wij "trainen" mensen om zich het beste uit zichzelf te halen als het aankomt op het solliciteren naar werk.</p>
-                  <p>Dat trainen doen we met behulp van groepsworkshops en individueel, met behulp van een JobMaatje.</p>
-                  <p>Waar mogelijk proberen wij ook, via onze netwerken, de werkzoeker in contact te brengen met mensen die hen misschien een stapje verder kunnen brengen.</p>
+                  <p>JobHulp Culemborg helpt mensen bij het zoeken naar werk. Wij bieden daarbij ondersteuning bij het vergroten van (zelf)kennis en vaardigheden, zoals bijvoorbeeld het geven van advies voor het opstellen van een CV, hoe te netwerken en jezelf te presenteren op sociale media en hoe je je kunt voorbereiden op een sollicitatiegesprek.</p>
+                  <p>Kortom, wij "trainen" mensen om het beste uit zichzelf te halen als het aankomt op het zoeken naar werk. </p>
+                  <p>Dat trainen doen we met behulp van groepsworkshops en individueel, en met behulp van een JobMaatje.</p>
+                  <p>Waar mogelijk proberen wij ook, via onze netwerken, de werkzoekende in contact te brengen met mensen die hen misschien een stapje verder kunnen brengen.</p>
                   
-                  <p>Wat JobHulp Culemborg niet doet, en ook niet kan doen, is meegaan met de werkzoeker op sollicitatiebezoek. Of voor de werkzoeker een goede CV opstellen en brieven of emails schrijven. Uiteindelijk moet de werkzoeker zelf aan de slag
-                    om dat werk of die baan te krijgen.</p>
-                  <p>De grondregel is dat de werkzoeker te allen tijde zelf verantwoordelijk blijft voor het slagen (of niet slagen) van de zoektocht.
-                </div>
+                  <p>Wat JobHulp Culemborg niet doet, is bemiddelen tussen de werkzoekende en mogelijke werkgevers of meegaan op sollicitatiebezoek. En ook schrijft JobHulp Culemborg geen brieven of e-mails. Uiteindelijk moet de werkzoekende zelf aan de slag om een baan te vinden. De grondregel is dat de werkzoekende zelf verantwoordelijk is en blijft voor het slagen (of niet slagen) van de zoektocht.</p>
+                 </div>
               </li>
 
               <!-- <li>

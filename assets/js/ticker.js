@@ -1,37 +1,35 @@
- var ticker = $("#ticker");
- var t;
- 
- var li_count = 1;
- var li_length = $("#ticker ul.news-list li").length;
-		   
- var li = $("#ticker li").first();
- 
- var runTicker = function(trans_width) {
-   $(li).css({"left":+trans_width+"px"});
-   t = setInterval(function(){
-	 if (parseInt($(li).css("left")) > -$(li).width()) {
-	   $(li).css({"left":parseInt($(li).css("left")) - 1 + "px","display":"block"});
-	 } else {
-	   clearInterval(t);
-	   trans_width = ticker.width();
-	   li = $(li).next();				
-	   if(li_count == li_length){
-		 li_count = 1;
-		 li = $("#ticker li").first();
-		 runTicker(trans_width);
-	   } else if (li_count < li_length) {
-		 li_count++;
-		 setTimeout(function(){
-		 runTicker(trans_width);
-		 },500);					
-	   }
-	 }
-   },1);	
- }	
- $(ticker).hover(function(){
-   clearInterval(t);
- },
- function(){
-   runTicker(parseInt($(li).css("left")));
- });
- runTicker(ticker.width());
+$(function () {
+    var $ticker  = $("#ticker");
+    var $items   = $("#ticker li");
+    var current  = 0;
+    var paused   = false;
+    var pos      = $ticker.width();
+    var animId;
+    var lastTime = null;
+    var speed    = 120; // pixels per seconde (onafhankelijk van framerate)
+
+  
+    function step(timestamp) {
+      if (!paused) {
+        var delta = lastTime ? (timestamp - lastTime) / 1000 : 0;
+        pos -= speed * delta; // bijv. 60px/s op elk scherm
+        var $li = $items.eq(current);
+        $li.css("transform", "translateX(" + pos + "px)").show();
+  
+        // Volgende item als bijna klaar
+        if (pos < -$li.outerWidth()) {
+          $li.hide();
+          current = (current + 1) % $items.length;
+          pos = $ticker.width();
+        }
+      }
+      lastTime = timestamp;
+      animId = requestAnimationFrame(step);
+    }
+  
+$ticker.hover(
+      function () { paused = true; },
+      function () { paused = false; lastTime = null; } // ← reset
+    );  
+    animId = requestAnimationFrame(step);
+  });

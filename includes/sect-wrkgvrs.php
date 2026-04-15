@@ -6,13 +6,13 @@
 	 			<h3>Hoe kunnen bedrijven helpen?</h3>
 	 		</div>
 	 		<div class="row mb-4 g-5">
-	 			<div class="col-lg">
+	 			<div class="col-lg my-0">
 					<p>JobHulp Culemborg is primair een organisatie voor werkzoekenden die bij hun zoektocht naar werk (tijdelijk) een steuntje in de rug nodig hebben. Als Culemborgse werkgever op zoek is naar talent voor uw bedrijf, kan JobHulp Culemborg een waardevolle aanvulling zijn op uw reguliere kanalen, zoals uitzendbureaus, detacheringsbureaus en headhunters.</p>
 					<p>JobHulp Culemborg begeleidt bovendien veelal goed geschoolde Nieuwkomers, die moeite hebben om in Nederland een plaats op de arbeidsmarkt te veroveren. Mocht u hiervoor open staan, dan gaan we graag met u na, of er binnen uw bedrijf mogelijkheden zijn om een leer/werkplek te creëren. U krijgt dan, on-the-job, inzicht in kwaliteiten, ervaring en taalvaardigheid van de nieuwkomer. Een ervaren JobMaatje coacht en begeleidt de Nieuwkomer. Uiteindelijk kunt u er een hardwerkende, zeer gemotiveerde medewerker aan overhouden!</p>
 					<p>Het omgekeerde kan ook voorkomen. Uw bedrijf kan voor een reorganisatie staan, waarbij medewerkers naar ander werk begeleid moeten worden, of waarbij gebleken is dat een medewerker niet meer helemaal op zijn/haar plek zit. Via onze JobGroep trainingen, aangevuld met 1-op-1 begeleiding door een JobMaatje, kan JobHulp Culemborg een aanvulling zijn op uw reguliere outplacement kanalen.</p>
 					<p>Als lokale vrijwilligersorganisatie staat JobHulp Culemborg met beide benen in de Culemborgse samenleving. Datzelfde geldt voor ons vrijwilligers (JobMaatjes). Hierdoor zijn wij laagdrempelig, kunnen wij snel schakelen en snel voor uw bedrijf aan de slag gaan.</p>
 	 			</div>
-	 			<div class="col-lg">
+	 			<div class="col-lg my-0">
 					<p>JobHulp Culemborg is een non-profit vrijwilligersorganisatie en wij kunnen ons werk niet doen zonder financiële steun van de gemeente Culemborg, maatschappelijk fondsen en lokale bedrijven. 
 					Speciaal voor lokale bedrijven die verankerd zijn in de Culemborgse samenleving en die net als wij willen investeren in de ontwikkeling en maatschappelijke participatie van de inwoners van Culemborg, hebben wij het concept “Sociaal Maatschappelijk Aandeelhouderschap” ontwikkeld. Wat betekent dit?</p>
 					<ul>

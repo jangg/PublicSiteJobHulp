@@ -17,22 +17,10 @@ if (isset($_SESSION['result']))
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
 
     <script>
-        // function isEmail(email) {
-        //     var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        //     return regex.test(email);
-        //    }
         $(document).ready(function() {
-            function isEmail(email) {                
-                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                if(email.value.match(mailformat))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-               }
+            function isEmail(email) {
+              return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+            }
             $('#a_wzaanmeld').addClass('active');
             $("#geboortedatum").datepicker({
                 dateFormat: "yy-mm-dd",
@@ -204,6 +192,7 @@ if (isset($_SESSION['result']))
                     <div class="col-xl"></div>
                     <!-- <div class="col-xl-6 d-xl-none"> -->
                         <div class="col-xl-6">
+                        <fieldset>
                         <legend class="border pt-1 pb-4 px-3">Persoonlijke gegevens
                             <div>
                                 <label for="voornaam" class="col-form-label p-0 m-0">Voornaam*</label><span>(Verplicht)</span>
@@ -211,67 +200,71 @@ if (isset($_SESSION['result']))
                             </div>
                             <div>
                                 <label for="tussenvoegsels" class="col-form-label p-0 m-0">Tussenvoegsels</label>
-                                <input type="text" name="tussenvoegsels" class="form-control m-0" placeholder="" aria-label="tussenvoegsels" aria-describedby="tussenvoegsels" value="<?php if (isset($arr->am_tussenvoegsels)) echo $arr->am_tussenvoegsels; ?>">
+                                <input id="tussenvoegsels" type="text" name="tussenvoegsels" class="form-control m-0" placeholder="" aria-label="tussenvoegsels" aria-describedby="tussenvoegsels" value="<?php if (isset($arr->am_tussenvoegsels)) echo $arr->am_tussenvoegsels; ?>">
                             </div>
                             <div>
                                 <label for="achternaam" class="col-form-label p-0 m-0">Achternaam*</label><span>(Verplicht)</span>
                                 <input id="achternaam" type="text" name="achternaam" class="form-control m-0" placeholder="" aria-label="achternaam" aria-describedby="achternaam" required value="<?php if (isset($arr->am_achternaam)) echo $arr->am_achternaam; ?>">
                             </div>
                             <div>
-                                <label for="emailadres" class="col-form-label p-0 m-0">Straat</label>
-                                <input id="emailadres" type="email" id="emailadres1" name="straat" class="form-control m-0" aria-label="straat" aria-describedby="straat" value="<?php if (isset($arr->am_straat)) echo $arr->am_straat; ?>">
+                                <label for="straat" class="col-form-label p-0 m-0">Straat</label>
+                                <input id="straat" type="text" name="straat" class="form-control m-0" aria-label="straat" aria-describedby="straat" value="<?php if (isset($arr->am_straat)) echo $arr->am_straat; ?>">
                             </div>
                             <div>
-                                <label for="emailadres" class="col-form-label p-0 m-0">Huisnummer</label>
-                                <input id="emailadres" type="email" id="emailadres1" name="huisnummer" class="form-control m-0" aria-label="huisnummer" aria-describedby="huisnummer" value="<?php if (isset($arr->am_huisnummer)) echo $arr->am_huisnummer; ?>">
+                                <label for="huisnummer" class="col-form-label p-0 m-0">Huisnummer</label>
+                                <input id="huisnummer" type="text" name="huisnummer" class="form-control m-0" aria-label="huisnummer" aria-describedby="huisnummer" value="<?php if (isset($arr->am_huisnummer)) echo $arr->am_huisnummer; ?>">
                             </div>
                             <div>
-                                <label for="emailadres" class="col-form-label p-0 m-0">Postcode</label>
-                                <input id="emailadres" type="email" id="emailadres1" name="postcode" class="form-control m-0" aria-label="postcode" aria-describedby="postcode" value="<?php if (isset($arr->am_postcode)) echo $arr->am_postcode; ?>">
+                                <label for="postcode" class="col-form-label p-0 m-0">Postcode</label>
+                                <input id="postcode" type="text" name="postcode" class="form-control m-0" aria-label="postcode" aria-describedby="postcode" value="<?php if (isset($arr->am_postcode)) echo $arr->am_postcode; ?>">
                             </div>
                             <div>
-                                <label for="emailadres" class="col-form-label p-0 m-0">Woonplaats</label>
-                                <input id="emailadres" type="email" id="emailadres1" name="woonplaats" class="form-control m-0" aria-label="woonplaats" aria-describedby="woonplaats" value="<?php if (isset($arr->am_woonplaats)) echo $arr->am_woonplaats; ?>">
+                                <label for="woonplaats" class="col-form-label p-0 m-0">Woonplaats</label>
+                                <input id="woonplaats" type="text" name="woonplaats" class="form-control m-0" aria-label="woonplaats" aria-describedby="woonplaats" value="<?php if (isset($arr->am_woonplaats)) echo $arr->am_woonplaats; ?>">
                             </div>
                             <div>
                                 <label for="emailadres" class="col-form-label p-0 m-0">Emailadres*</label><span>(Verplicht)</span>
-                                <input id="emailadres" type="email" id="emailadres1" name="emailadres" class="form-control m-0" aria-label="emailadres" aria-describedby="emailadres" value="<?php if (isset($arr->am_emailadres)) echo $arr->am_emailadres; ?>">
+                                <input id="emailadres" type="email" name="emailadres" class="form-control m-0" aria-label="emailadres" aria-describedby="emailadres" value="<?php if (isset($arr->am_emailadres)) echo $arr->am_emailadres; ?>" required>
                             </div>
                             <div>
                                 <label for="telefoonnr" class="col-form-label p-0 m-0">Telefoonnummer*</label><span>(Verplicht)</span>
-                                <input id="telefoonnr" type="tel" id="telefoonnr1" name="telefoonnr" class="form-control m-0" aria-label="telefoonnr" aria-describedby="telefoonnr" value="<?php if (isset($arr->am_telefoonnr)) echo $arr->am_telefoonnr; ?>">
+                                <input id="telefoonnr" type="tel" name="telefoonnr" class="form-control m-0" aria-label="telefoonnr" aria-describedby="telefoonnr" value="<?php if (isset($arr->am_telefoonnr)) echo $arr->am_telefoonnr; ?>" required>
                             </div>
-                            <span2 style="font-size: .65em; color: #777;">Velden met een * zijn verplicht</span2>
+                            <span style="font-size: .65em; color: #777;">Velden met een * zijn verplicht</span>
                         </legend>
-                        
+                        </fieldset>
+                        <fieldset>
                         <legend class="border pt-1 pb-4 px-3 mt-3">Wat zou je graag willen doen?*
                             <div>
                                 <input type="checkbox" id="optie-mtj" name="optie1" value="mtj" <?php if (isset($arr->optie_mtj) && $arr->optie_mtj == 'mtj') echo 'checked';?>>
-                                <label for="optie-maatje">Individueel traject met een JobMaatje</label><br />
+                                <label for="optie-mtj">Individueel traject met een JobMaatje</label><br />
                                 <input type="checkbox" id="optie-jg1" name="optie2" value="jg1" <?php if (isset($arr->optie_jg1) && $arr->optie_jg1 == 'jg1') echo 'checked';?>>
-                                <label for="optie-groep">Deelnemen aan een JobGroep</label><br />
+                                <label for="optie-jg1">Deelnemen aan een JobGroep</label><br />
                                 <input type="checkbox" id="optie-jg2" name="optie3" value="jg2" <?php if (isset($arr->optie_jg2) && $arr->optie_jg2 == 'jg2') echo 'checked';?>>
-                                <label for="optie-groep">Deelnemen aan "Stap in vrijwilligerswerk"</label><br />
+                                <label for="optie-jg2">Deelnemen aan "Stap in vrijwilligerswerk"</label><br />
                                 <input type="checkbox" id="optie-jg3" name="optie4" value="jg3" <?php if (isset($arr->optie_jg3) && $arr->optie_jg3 == 'jg3') echo 'checked';?>>
-                                <label for="optie-groep">Helpen als vrijwilliger</label><br />
+                                <label for="optie-jg3">Helpen als vrijwilliger</label><br />
                                 <input type="checkbox" id="optie-anders" name="optie7" value="and" <?php if (isset($arr->optie_and) && $arr->optie_and == 'and') echo 'checked';?>>
                                 <label for="optie-anders">Iets anders</label><br />
                             </div>
                         </legend>
+                        </fieldset>
+                        <fieldset>
                         <legend class="border pt-1 pb-4 px-3 mt-3">Vertel iets over jezelf
                             <div>
                                 <label for="situatie" class="col-form-label p-0 m-0">Wat is je situatie?</label>
-                                <textarea name="situatie" id="text" class="form-control" aria-describedby="situatieHelpInline" rows="5"><?php if (isset($arr->am_situatie)) echo $arr->am_situatie; ?></textarea>
+                                <textarea name="situatie" id="situatie" class="form-control" aria-describedby="situatieHelpInline" rows="5"><?php if (isset($arr->am_situatie)) echo $arr->am_situatie; ?></textarea>
                             </div>
                             <div>
                                 <label for="reden" class="col-form-label p-0 m-0">Hoe ben je bij ons terecht gekomen?</label>
-                                <textarea type="textarea" name="reden" id="text" class="form-control" aria-describedby="bronHelpInline" rows="5"><?php if (isset($arr->am_reden)) echo $arr->am_reden; ?></textarea>
+                                <textarea  name="reden" id="reden" class="form-control" aria-describedby="bronHelpInline" rows="5"><?php if (isset($arr->am_reden)) echo $arr->am_reden; ?></textarea>
                             </div>
                             <div>
                                 <label for="opmerkingen" class="col-form-label p-0 m-0">Vragen en opmerkingen</label>
-                                <textarea type="textarea" name="opmerkingen" id="text" class="form-control" aria-describedby="opmerkingenHelpInline" rows="5"><?php if (isset($arr->am_opmerkingen)) echo $arr->am_opmerkingen; ?></textarea>
+                                <textarea name="opmerkingen" id="opmerkingen" class="form-control" aria-describedby="opmerkingenHelpInline" rows="5"><?php if (isset($arr->am_opmerkingen)) echo $arr->am_opmerkingen; ?></textarea>
                             </div>
                         </legend>
+                        </fieldset>
                    </div>
                     <div class="col-xl"></div>
                 </div>
@@ -293,6 +286,7 @@ if (isset($_SESSION['result']))
                     <div class="col-xl"></div>
                     <div class="col-xl-6">
                         <button id="sendBut" type="submit" name="sendBut" value="sendForm" class="btn btn-primary">Verstuur aanmelding</button>
+                        
                     </div>
                     <div class="col-xl"></div>
                 </div>

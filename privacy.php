@@ -128,8 +128,7 @@
                 <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Wat doet JobHulpMaatje?<i class="bi bi-caret-down-square icon-show"></i><i class="bi bi-caret-up-square icon-close"></i></div>
                 <div id="faq1" class="collapse" data-bs-parent=".faq-list">
                   <p>
-                    JobHulpMaatje is een organisatie die bestaat uit mensen die op vrijwillige basis andere mensen (hulpzoekers) bijstaan bij het zoeken naar een baan
-                    of vervangend zinvolle arbeid (zoals een vrijwilligersbetrekking of een studie).</p>
+                    JobHulp Culemborg is een organisatie die bestaat uit mensen die op vrijwillige basis andere mensen (werkzoekenden) bijstaan bij het zoeken naar een baan of vervangend zinvolle arbeid (zoals vrijwilligerswerk of een studie).</p>
                 </div>
               </li>
 

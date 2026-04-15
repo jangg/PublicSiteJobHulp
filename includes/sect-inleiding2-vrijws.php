@@ -12,8 +12,8 @@
 	 				</div>
 	 				<div class="col-lg">
 	 					<h4>Zo werkt het</h4>
-	 					<p>Wil jij JobMaatje worden voor een werkzoekende? Sommige werkzoekenden vinden het lastig om mee te draaien in een groep, of hebben na de JobGroep behoefte aan extra begeleiding.
-	 						Als JobMaatje word jij gekoppeld aan een werkzoekende stadsgenoot die jij één op één coacht.
+	 					<p>Wil jij JobMaatje worden voor een werkzoekende? Sommige werkzoekenden vinden het lastig om deel te nemen aan een groep, of hebben na de JobGroep behoefte aan extra begeleiding.
+	 						Als JobMaatje word jij gekoppeld aan een werkzoekende die jij één op één coacht.
 	 						Je gaat aan de slag met dezelfde vraagstukken als in de groepsbijeenkomsten, maar je begeleidt iemand individueel.</p>
 	 				</div>
 	 			</div>

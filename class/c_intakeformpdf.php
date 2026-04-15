@@ -5,12 +5,12 @@ class IntakeformPDF extends TCPDF
 	//Page header
 	public function Header() {
 		// Logo
-		$image_file = K_PATH_IMAGES.'LogoJobHulpMaatjeZoetermeer.jpg';
+		$image_file = "/logos/" . LOC_LOGO;
 		$this->Image($image_file, 23, 20, 35, '', 'JPG', '', 'T', false, 300, '', false, false, 0, false, false, false);
 		// Set font
 		$this->SetFont('helvetica', 'b', 20);
 		// Title
-		$this->Cell(0, 15, 'JHMZ intakeformulier', 0, false, 'C', 0, '', 0, false, 'M', 'M');
+		$this->Cell(0, 15, LOC_NAME . ' intakeformulier', 0, false, 'C', 0, '', 0, false, 'M', 'M');
 	}
 
 	// Page footer

@@ -28,27 +28,23 @@ if (isset($_POST['sendBut']) && $_POST['sendBut'] == 'sendForm')
 	} 
 	/* Eerst een email naar de aanmelder */
 	$message = 'Beste ' . $arr['am_voornaam'] . ' ' . $arr['am_tussenvoegsels'] . ' ' . $arr['am_achternaam'] . "<br/><br/>";
-	$message .= 'Je hebt de volgende gegevens naar JobHulpMaatje Zoetermeer verzonden: ' . "<br/><br/>";
+	$message .= 'Je hebt de volgende gegevens naar JobHulp Culemborg verzonden: ' . "<br/><br/>";
 	$message .= 'Emailadres : ' . $arr['am_emailadres'] . '<br/>';
 	$message .= 'Je hebt je aangemeld voor de volgende optie(s):' . '<br/><br/>';
-	if ($arr['optie_wsp']) $message .= 'Workshop "Succesvol solliciteren" door Saskia Koerselman op 19-9' . '<br/>';
+	if ($arr['optie_wsp']) $message .= 'xxxxxxxxxxxxxxxx' . '<br/>';
 	$message .= "<br/><br/>" . 'Met vriendelijke groeten,';
-	$message .= "<br/>" . 'JobHulpMaatje Zoetermeer';
+	$message .= "<br/>" . 'JobHulp Culemborg';
 
 	// error_log($message);
 	$name = $arr['am_voornaam'] . ' ' . $arr['am_tussenvoegsels'] . ' ' . $arr['am_achternaam'];
-	if (!Tools::MailRoom($name, $arr['am_emailadres'], 'Aanmelding Workshop door JobHulpMaatje Zoetermeer', $message))
-		error_log('Mail naar sender mislukt!');
+	Tools::MailRoom($name, $arr['am_emailadres'], 'Aanmelding Workshop door JobHulp Culemborg', $message);
 	
-	/* Dan een email naar de coordinator */
+	/* Dan een email naar de coordinator */	
+	$message = 'Er is een nieuwe aanmelding voor xxxxxxxxx binnengekomen via de website jobhulpmculemborg.nl<br/><br/><br/>' . $message;	
+	Tools::MailRoom('Coordinator', 'aanmelding@jobhulpculemborg.nl', 'Aanmelding xxxxxxxxxxxxxxxxxx', $message);
 	
-	$message = 'Er is een nieuwe aanmelding voor de workshop van 19-9 binnengekomen via de website jobhulpmaatjezoetermeer.nl<br/><br/><br/>' . $message;
+	Tools::closeMailer();
 	
-	if (!Tools::MailRoom('Coordinator', 'aanmelding@jhm-zoetermeer.nl', 'Aanmelding Workshop 19-9 JobHulpMaatje Zoetermeer', $message))
-		error_log('Mail naar JHMZ mislukt!');
-	if (!Tools::MailRoom('Coordinator', 'jan@prohunter.nl', 'Aanmelding Workshop 19-9 JobHulpMaatje Zoetermeer', $message))
-		error_log('Mail naar ProHunter mislukt!');
-
 	// error_log($message);
 	header('location: aanmeldenworkshop.php');
 	exit();	

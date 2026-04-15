@@ -13,7 +13,7 @@
 		</div>
 	</div>
  </div>
- <!-- <div class="sidebar" data-aos="zoom-out" data-aos-delay="1000" >
+ <div class="sidebar" data-aos="zoom-out" data-aos-delay="1000" style="z-index: 5;">
 	 <div  class="upper-sidebar"></div>
 	 <div class="upper-link upper-link-l d-none d-xl-block">
 		<a href="werkzoekende/index.php"><span style="font-size: 2em;">Werkzoeker? <i class="far fa-hand-point-right"></i><br/></span></a>
@@ -25,5 +25,5 @@
 		<a href="sponsor/index.php"><span style="font-size: 1em;">Sponsor? <i class="far fa-hand-point-right"></i><br/></span></a>
 		<a href="werkgever/index.php"><span style="font-size: 1em;">Werkgever? <i class="far fa-hand-point-right"></i></span></a>
 	 </div>
- </div> -->
+ </div>
 </section><!-- End Hero -->

@@ -24,15 +24,15 @@ if (isset($_POST['sendBut']) && $_POST['sendBut'] == 'sendForm')
 
 	// error_log($message);
 	$name = $arr['am_voornaam'] . ' ' . $arr['am_tussenvoegsels'] . ' ' . $arr['am_achternaam'];
-	if (!Tools::MailRoom($name, $arr['am_emailadres'], 'Aanmelding JobHulpMaatje Zoetermeer', $message))
-		error_log('Mail naar sender mislukt!');
+	Tools::MailRoom($name, $arr['am_emailadres'], 'Aanmelding JobHulpMaatje Zoetermeer', $message);
 	
 	/* Dan een email naar de coordinator */
 	
 	$message = 'Er is een nieuwe aanmelding voor de partnerbijeenkomst<br/><br/><br/>' . $message;
 	
-	if (!Tools::MailRoom('Organisator', 'aanmeldingpb@jobhulpmaatjezoetermeer.nl', 'Aanmelding Partnerbijeenkomst', $message))
-		error_log('Mail naar JHMZ mislukt!');
+	Tools::MailRoom('Organisator', 'aanmelding@jobhulpmaatjezoetermeer.nl', 'Aanmelding Partnerbijeenkomst', $message);
+	
+	Tools::closeMailer();
 	// echo $wkz;
 	header('location: pb_aanmelden.php');
 	exit();	

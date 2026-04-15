@@ -54,7 +54,7 @@ require_once 'config.php';
             <h2>Stichtinggegevens</h2>
             <h3>Stichting JobHulp Culemborg</h3>
             <p>Stichting JobHulp Culemborg is een ANBI-instelling (Algemeen Nut Beogende Instelling)<br/>
-            Kijk voor meer informatie over de ANBI status van de stichting op <a href="https://anbi.nl" target="_blank">ANBI.nl</a></p>.
+            Kijk voor meer informatie over de ANBI status van de stichting op <a href="https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/bijzondere_regelingen/goede_doelen/algemeen_nut_beogende_instellingen/wat_is_een_anbi" target="_blank">de website van de belastingdienst.</a></p>
             <br/>
             <p>RSIN-nummer: 855158049<br/>
             KVK-nummer: 63259222<br/><br/>
@@ -64,8 +64,9 @@ require_once 'config.php';
             Het onbezoldigde bestuur van stichting JobHulp Culemborg wordt gevormd door:</p>
             <ul style="text-align: left; font-size: 1.2em;">
               <li>Voorzitter: Dhr. Rien van der Veer</li>
+              <li>Vice-voorzitter: Mevr. Judith Tijdink</li>
               <li>Secretaris: Dhr. Wim de Haas</li>
-              <li>Penningmeester: Mevr. Bojana Vaci&ccedil;</li>
+              <li>Penningmeester: Mevr. Bojana Vasi&cacute;</li>  <!-- Vaci&ccedil; -->
             </ul>
           </div>
         </div>
@@ -79,9 +80,9 @@ require_once 'config.php';
               <h3>Download belangrijke documenten</h3>
               <p>Als publieke stichting laten wij zoveel mogelijk zien wie we zijn en wat we doen. Hieronder vindt u belangrijke documenten die u kunt downloaden en lezen. U mag ze tevens gebruiken voor uw eigen publicatie. Voorwaarde is wel dat u de documenten en deze website als bron vermeldt bij uw publicatie. Zodra u een document downloadt, gaat u impliciet akkoord met genoemde regels.</p><br/>
               <ul style="text-align: left; font-size: 1.2em;">
-              <!-- <li><a href="docs/Projectplan_JHMZoetermeer_v01032018.pdf" download="projectplan.pdf">Projectplan&nbsp&nbsp&nbsp<i class="fas fa-download"></i></a></li>
-              <li><a href="docs/jaarverslag2020.pdf" download="Jaarverslag2020.pdf">Jaarverslag 2020&nbsp&nbsp&nbsp<i class="fas fa-download"></i></a></li>
-              <li><a href="docs/Financieel-verslag-ANBI-Reliance-2020-versie-definitief.docx" download="Financieelverslag2020.pdf">Financieel verslag 2020&nbsp&nbsp&nbsp<i class="fas fa-download"></i></a></li> -->
+              <li><a href="docs/Jaarrekening JobHulp 2025.pdf" download="Jaarrekening JobHulp 2025.pdf">Jaarrekening JobHulp 2025&nbsp&nbsp&nbsp<i class="fas fa-download"></i></a></li>
+              <li><a href="docs/Jaarverslag JobHulp 2025.pdf" download="Jaarverslag JobHulp 2025.pdf">Jaarverslag JobHulp 2025.pdf&nbsp&nbsp&nbsp<i class="fas fa-download"></i></a></li> 
+              <!-- <li><a href="docs/Financieel-verslag-ANBI-Reliance-2020-versie-definitief.docx" download="Financieelverslag2020.pdf">Financieel verslag 2020&nbsp&nbsp&nbsp<i class="fas fa-download"></i></a></li> -->
               <!-- <li><a href="docs/JobHulpMaatje Zoetermeer jaarverslag 2021.pdf" download="Jaarverslag2021.pdf">Jaarverslag 2021&nbsp&nbsp&nbsp<i class="fas fa-download"></i></a></li>
               <li><a href="docs/Financieel-verslag-ANBI-Reliance-2021.pdf" download="Financieelverslag2021.pdf">Financieel verslag 2021&nbsp&nbsp&nbsp<i class="fas fa-download"></i></a></li> -->
               <!-- <li><a href="docs/Verslag Partnerbijeenkomst.pdf" download="Verslag Bijeenkomst.pdf">Verslag Partnerbijeenkomst 16 juni jl.&nbsp&nbsp&nbsp<i class="fas fa-download"></i></a></li> -->

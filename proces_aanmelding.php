@@ -25,7 +25,7 @@ if (isset($_POST['woonplaats']))		$arr['am_woonplaats'] = $_POST['woonplaats']; 
 if (isset($_POST['emailadres'])) 		$arr['am_emailadres'] = $_POST['emailadres']; else $arr['am_emailadres'] = '';
 if (isset($_POST['telefoonnr'])) 		$arr['am_telefoonnr'] = $_POST['telefoonnr']; else $arr['am_telefoonnr'] = '';
 if (isset($_POST['situatie'])) 			$arr['am_situatie'] = $_POST['situatie']; else $arr['am_situatie'] = '';
-if (isset($_POST['reden'])) 			$arr['am_reden'] = $_POST['reden']; else $arr['am_redenm'] = '';
+if (isset($_POST['reden'])) 			$arr['am_reden'] = $_POST['reden']; else $arr['am_reden'] = '';
 if (isset($_POST['opmerkingen'])) 		$arr['am_opmerkingen'] = $_POST['opmerkingen']; else $arr['am_opmerkingen'] = '';
 $arr['optie_mtj']					= $optie1;
 $arr['optie_jg1']					= $optie2;
@@ -49,7 +49,7 @@ if (isset($_POST['sendBut']) && $_POST['sendBut'] == 'sendForm')
 	} 
 	/* Eerst een email naar de aanmelder */
 	$message = 'Beste ' . $arr['am_voornaam'] . ' ' . $arr['am_tussenvoegsels'] . ' ' . $arr['am_achternaam'] . "<br/><br/>";
-	$message .= 'Je hebt de volgende gegevens naar JobHulpMaatje Zoetermeer verzonden: ' . "<br/><br/>";
+	$message .= 'Je hebt de volgende gegevens naar JobHulp Culemborg verzonden: ' . "<br/><br/>";
 	$message .= 'Straat : ' . $arr['am_straat'] . '<br/>';
 	$message .= 'Huisnummer : ' . $arr['am_huisnummer'] . '<br/>';
 	$message .= 'Postcode : ' . $arr['am_postcode'] . '<br/>';
@@ -61,28 +61,29 @@ if (isset($_POST['sendBut']) && $_POST['sendBut'] == 'sendForm')
 	$message .= 'Opmerkingen:<br/>' . $arr['am_opmerkingen'] . '<br/><br/>';
 	$message .= 'Je hebt je aangemeld voor de volgende optie(s):' . '<br/><br/>';
 	if ($arr['optie_mtj']) $message .= 'Persoonlijk begeleiding' . '<br/>';
-	if ($arr['optie_jg1']) $message .= 'Jobgroup' . '<br/>';
-	if ($arr['optie_jg2']) $message .= 'Jobgroup Ik Werk In Nederland' . '<br/>';
-	if ($arr['optie_jg3']) $message .= 'Jobgroup ZZP' . '<br/>';
+	if ($arr['optie_jg1']) $message .= 'Jobgroep' . '<br/>';
+	if ($arr['optie_jg2']) $message .= 'Jobgroep Ik Werk In Nederland' . '<br/>';
+	if ($arr['optie_jg3']) $message .= 'Jobgroep ZZP' . '<br/>';
 	if ($arr['optie_wks']) $message .= 'Workshop' . '<br/>';
-	if ($arr['optie_vrw']) $message .= 'Vrijwilliger bij JobHulpMaatje' . '<br/>';
+	if ($arr['optie_vrw']) $message .= 'Vrijwilliger bij JobHulp' . '<br/>';
 	if ($arr['optie_and']) $message .= 'Je weet het nog niet' . '<br/>';
 	$message .= "<br/><br/>" . 'Wij zullen je aanmelding zo spoedig mogelijk verwerken en vervolgens contact met je opnemen.';
 	$message .= "<br/><br/>" . 'Met vriendelijke groeten,';
-	$message .= "<br/>" . 'JobHulpMaatje Zoetermeer';
-
-	// error_log($message);
+	$message .= "<br/>" . 'JobHulp Culemborg';
+    // error_log($message);
 	$name = $arr['am_voornaam'] . ' ' . $arr['am_tussenvoegsels'] . ' ' . $arr['am_achternaam'];
 	
-	if (!Tools::MailRoom($name, $arr['am_emailadres'], 'Aanmelding JobHulpMaatje Zoetermeer', $message))
+	if (!Tools::MailRoom($name, $arr['am_emailadres'], 'Aanmelding JobHulp Culemborg', $message))
 		error_log('Mail naar sender mislukt!');
 	
 	/* Dan een email naar de coordinator */
 	
-	$message = 'Er is een nieuwe aanmelding binnengekomen via de website jobhulpmaatjezoetermeer.nl<br/><br/><br/>' . $message;
+	$message = 'Er is een nieuwe aanmelding binnengekomen via de website jobhulpculemborg.nl<br/><br/><br/>' . $message;
 	
-	if (!Tools::MailRoom('Coordinator', 'aanmelding@jobhulpmaatjezoetermeer.nl', 'Aanmelding JobHulpMaatje Zoetermeer', $message))
-		error_log('Mail naar JHMZ mislukt!');
+	if (!Tools::MailRoom('Coordinator', 'aanmelding@jobhulpculemborg.nl', 'Aanmelding JobHulp Culemborg', $message))
+		error_log('Mail naar JHC mislukt!');
+	Tools::closeMailer();	
+	
 	// error_log($message);
 	/*    
 	JobHulpMaatje       = ja ==> $opties +1
@@ -129,9 +130,9 @@ if (isset($_POST['sendBut']) && $_POST['sendBut'] == 'sendForm')
 	$ps->toelichting = 'Nieuw';
 	$ps->saveToDB();
 	// echo $wkz;
-	header('location: aanmelden.php');
-	exit();	
-
+	$_SESSION['flash'] = 'aanmelding_ok';
+	header("location: index.php");
+	exit();
 }
 
 ?>

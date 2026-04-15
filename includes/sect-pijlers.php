@@ -6,13 +6,12 @@
 	 			<h3><?= LOC_NAME ?> helpt je op 3 manieren</h3>
 	 		</div>
 	 		<div class="row mb-4 g-5">
-	 			<div class="col-lg">
+	 			<div class="col-lg my-0">
 	 				<p>Steeds meer mensen hebben meer tijd, steun en aandacht nodig bij hun zoektocht naar werk. JobHulp Culemborg biedt hen die tijd en aandacht en wij ondersteunen werkzoekenden bij het versterken en ontwikkelen van hun vaardigheden om hun kansen op de arbeidsmarkt te vergroten.<br/><br/>
-					Zoals een ouder een kind helpt bij het leren fietsen (eerst met twee zijwieltjes, dan met één, dan met één hand losjes op de schouder,</p> 
-					 </p>
+					De zoektocht naar werk is niet altijd eenvoudig. Daar kunnen verschillende redenen voor zijn, zoals onvoldoende sollicitatievaardigheden, persoonlijke omstandigheden, onvoldoende diploma's of certificaten, taalproblemen of zelfs leeftijdsdiscriminatie.</p> 
 	 			</div>
-	 			<div class="col-lg">
-	 				<p>en ten slotte helemaal los op twee wielen), zo helpt JobHulp Culemborg de werkzoekende om alle stappen richting werk beter onder de knie te krijgen. Uiteindelijk moet de persoon het zelf doen! Je JobMaatje kijkt vanaf de zijlijn mee.</p>
+	 			<div class="col-lg my-0">
+	 				<p>Wat de redenen ook zijn, JobHulp Culemborg helpt jou als de werkzoekende om alle stappen richting werk beter onder de knie te krijgen. Uiteindelijk moet je het als werkzoekende wel zelf doen! Je JobMaatje kijkt en denkt met je mee.</p>
 					 <p>We bieden je hulp op 3 manieren, waarbij persoonlijke aandacht de rode draad is.</p>
 	 			</div>
 	 		</div>
@@ -57,7 +56,7 @@
 							<p class="card-text">Voor mensen die om wat voor reden dan ook misschien (nog) niet klaar zijn voor betaald werk, hebben we het Stap In Vrijwilligerswerk programma.</p>
 						</div>
 						<div class="card-footer text-center">
-							<a href="#sivmaatje" class="btn">Lees meer</a>
+							<a href="#vrijwsprog" class="btn">Lees meer</a>
 						</div>
 					</div>				
 				</div>				

@@ -48,11 +48,11 @@ require_once ('config.php');
           <h3>Alle betrokken mensen</h3>
           <div class="row mb-4 g-5">
             <div class="col-lg">
-              <p>JobHulp Culemborg  is een Goede Doelen Organisatie. Wij zijn ook een ANBI erkende stichting (RSIN: 855158049). Dat betekent dat de overheid formeel erkent dat JobHulp Culemborg geen belasting hoeft te betalen over giften en subsidies die zij ontvangt van sponsoren. En dat voor gevers giften aan JobHulp Culemborg aftrekbaar zijn voor belastingen. Voor meer over de status van ANBI, zie hier.</p>
-              <p>De stichting heeft een bestuur dat uit 3 mensen bestaat en op 1 januari 2026 zijn twee nieuwe leden toegetreden tot het bestuur. Bestuursleden worden voor onbepaalde tijd benoemd. Daarnaast zijn er sinds 1 januari 2026 ook 2 aspirant-bestuursleden. Het bestuur is verantwoordelijk voor het initiëren en uitvoeren van het beleid van de stichting. Voor de uitvoering worden al dan niet tijdelijke werkgroepen gevormd, waarbij 1 bestuurslid als voorzitter fungeert en rapporteert aan het bestuur.</p>
+              <p>JobHulp Culemborg is een Goede Doelen Organisatie. Wij zijn ook een ANBI erkende stichting (RSIN: 855158049). Dat betekent dat de overheid formeel erkent dat JobHulp Culemborg geen belasting hoeft te betalen over giften en subsidies die zij ontvangt van sponsoren. En dat voor gevers giften aan JobHulp Culemborg aftrekbaar zijn voor belastingen. Voor meer informatie over de status van ANBI, zie <a href="https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/bijzondere_regelingen/goede_doelen/algemeen_nut_beogende_instellingen/wat_is_een_anbi" target="_blank">hier</a></p>
+              <p>De stichting heeft een bestuur dat uit 4 mensen bestaat en sinds januari 2026 zijn drie nieuwe leden toegetreden tot het bestuur. Bestuursleden worden voor onbepaalde tijd benoemd.</p>
               <p>De operationele leiding ligt bij de Coördinator. Deze wordt bijgestaan door één of meerdere JobMaatjes die samen het Intaketeam vormen. De coördinator is een ZZP’er die tegen vergoeding invulling geeft aan de rol van Coördinator en JobGroep-trainer. Voor de uitvoering van deze taken is een vastgesteld aantal uren beschikbaar.</p>
               <p>De overige vrijwilligers zijn JobMaatjes of aspirant-JobMaatjes of vrijwilligers met een rol als redactielid, fondsenwerver of webmaster.</p>
-              <p>Een heel belangrijke rol is weggelegd voor de organisaties (kerken, bedrijven, overheid en fondsen) die door giften of subsidies het werk van JobHulp Culemborg mogelijk maken. Zonder hen kan JobHulp Culemborg niet bestaan. Dankzij het feit dat zij de maatschappelijke waarde van JobHulp Culemborg al meer dan 10 jaar erkennen, kunnen wij mensen die het nodig hebben, helpen bij het vinden van passend werk. Wij zijn hen dan ook erg dankbaar hiervoor.</p>
+              <p>Een heel belangrijke rol is weggelegd voor de organisaties (kerken, bedrijven, overheid en fondsen) die door giften of subsidies het werk van JobHulp Culemborg mogelijk maken. Zonder hen kan JobHulp Culemborg niet bestaan. Dankzij het feit dat zij de maatschappelijke waarde van JobHulp Culemborg al meer dan 10 jaar erkennen, kunnen wij mensen helpen bij het vinden van passend werk. Wij zijn hen, mede namens de vele werkzoekenden die over de afgelopen jaren door JobHulp Culemborg zijn begeleid, hier zeer erkentelijk voor.</p>
             </div>
         </div>
       </div>
@@ -83,13 +83,12 @@ require_once ('config.php');
               <li>
                 <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Wat doet <?= LOC_NAME ?> wel en wat doet ze niet<i class="bi bi-caret-down-square icon-show"></i><i class="bi bi-caret-up-square icon-close"></i></div>
                 <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                  <p>JobHulp Culemborg helpt mensen bij het zoeken naar werk. Wij bieden daarbij ondersteuning op gebied van het verkrijgen van zelfkennis en vaardigheden, zoals een goede CV maken, goed voor de dag komen op Social Media, jezelf presenteren, etc.</p>
-                  <p>Kortom, wij "trainen" mensen om zich het beste uit zichzelf te halen als het aankomt op het solliciteren naar werk.</p>
-                  <p>Dat trainen doen we met behulp van groepsworkshops en individueel, met behulp van een maatje.</p>
-                  <p>Waar mogelijk proberen wij ook, via onze netwerken, de werkzoeker in contact te brengen met mensen die hen misschien een stapje verder kunnen brengen.</p>
+                  <p>JobHulp Culemborg helpt mensen bij het zoeken naar werk. Wij bieden daarbij ondersteuning bij het vergroten van (zelf)kennis en vaardigheden, zoals bijvoorbeeld het geven van advies voor het opstellen van een CV, hoe te netwerken en jezelf te presenteren op sociale media en hoe je je kunt voorbereiden op een sollicitatiegesprek.</p>
+                  <p>Kortom, wij "trainen" mensen om het beste uit zichzelf te halen als het aankomt op het zoeken naar werk. </p>
+                  <p>Dat trainen doen we met behulp van groepsworkshops en individueel, en met behulp van een JobMaatje.</p>
+                  <p>Waar mogelijk proberen wij ook, via onze netwerken, de werkzoekende in contact te brengen met mensen die hen misschien een stapje verder kunnen brengen.</p>
                   
-                  <p>Wat JobHulp Culemborg niet doet, en ook niet kan doen, is meegaan met de werkzoeker op sollicitatiebezoek. Of voor de werkzoeker een goede CV opstellen en brieven of emails schrijven. Uiteindelijk moet de werkzoeker zelf aan de slag
-                    om dat werk of die baan te krijgen.</p>
+                  <p>Wat JobHulp Culemborg niet doet, is bemiddelen tussen de werkzoekende en mogelijke werkgevers of meegaan op sollicitatiebezoek. En ook schrijft JobHulp Culemborg geen brieven of e-mails. Uiteindelijk moet de werkzoekende zelf aan de slag om een baan te vinden. De grondregel is dat de werkzoekende zelf verantwoordelijk is en blijft voor het slagen (of niet slagen) van de zoektocht.</p>
                   <p>De grondregel is dat de werkzoeker te allen tijde zelf verantwoordelijk blijft voor het slagen (of niet slagen) van de zoektocht.
                 </div>
               </li>

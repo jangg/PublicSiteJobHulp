@@ -9,6 +9,8 @@ include_once ('c_keyrecord.php');
 
 class Tools
 {	
+	private static ?PHPMailer $mailer = null;  // PHP 7.4+: typed property
+
 	public static $statusArray = array (
 		'---' => '',
 		'000' => 'Nieuw',
@@ -329,51 +331,83 @@ class Tools
 			: (date("Y") - $birthDate[0]));
 		  return $age;
 	}
+	
+	private static function getMailer(): PHPMailer
+	{
+		if (self::$mailer === null)
+		{
+			$mail = new PHPMailer(true);
+			$mail->isSMTP();
+			$mail->Host       = MAIL_SMTP_SERVER;
+			$mail->SMTPAuth   = true;
+			$mail->Username   = MAIL_USERID;
+			$mail->Password   = MAIL_PASSWORD;
+			$mail->SMTPSecure = MAIL_SMTPSECURE === 'tls'
+				? PHPMailer::ENCRYPTION_STARTTLS
+				: PHPMailer::ENCRYPTION_SMTPS;
+			$mail->Port       = MAIL_SMTPSECURE === 'tls' ? 587 : 465;
+			$mail->CharSet    = 'UTF-8';
+			$mail->isHTML(true);
+			$mail->SMTPDebug  = MAIL_DEBUG_IND ?? 0;
+	
+			// SMTP-verbinding open houden tussen verzendingen
+			$mail->SMTPKeepAlive = true;
+	
+			self::$mailer = $mail;
+		}
+		return self::$mailer;
+	}
+	
+	public static function closeMailer(): void
+	{
+		if (self::$mailer !== null)
+		{
+			self::$mailer->smtpClose();
+			self::$mailer = null;
+		}
+	}
 
 	public static function MailRoom($nameTo, $emailTo, $onderwerp, $tekst)
 	{
 		// Maak een nieuw PHPMailer-object
-		$mail = new PHPMailer(true);
-
+		$mail = self::getMailer();
+		// echo 'MailRoom is gestart.<br/>';
 		try {
-			// Serverinstellingen
-			$mail->isSMTP();                            // Gebruik SMTP
-			$mail->Host       = MAIL_SMTP_SERVER;  		// SMTP-server
-			$mail->SMTPAuth   = true;                   // Activeren SMTP authenticatie
-			$mail->Username   = MAIL_USERID;			// Inlognaam SMTP
-			$mail->Password   = MAIL_PASSWORD;      	// Wachtwoord SMTP gebruiker
-			// $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Beveiligde verbinding
-			// $mail->Port       = 587;                 // Of 465 bij SSL
-			$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Beveiligde verbinding
-			$mail->Port       = 465;                    // Of 465 bij SSL
-
+			// Ontvanger & inhoud instellen (per aanroep anders)
+			$mail->clearAddresses();
+			$mail->clearReplyTos();
+	
 			// Afzender & ontvanger
-			$mail->setFrom(LOC_NOREPLY_EMAIL, LOC_NAME);
+			$mail->setFrom(MAIL_SENDEREMAIL, LOC_NAME);
+			$mail->addReplyTo(MAIL_NOREPLYEMAIL, 'No Reply');
 			$mail->addAddress($emailTo, $nameTo);
-
+	
 			// E-mailinhoud
-			$mail->isHTML(true);
-			$mail->CharSet = 'UTF-8';                   // Gebruik UTF-8
 			$mail->Subject = $onderwerp;
 			$mail->Body    = $tekst;
 			$mail->AltBody = strip_tags($tekst);        // Tekstversie (fallback)
 			// Versturen
 			$result = $mail->send();
+			// echo 'Mail is verzonden.<br/>';
 			// ===  Logging toevoegen  ===
 			self::logMailAction($emailTo, $onderwerp, $result, $mail->ErrorInfo ?? '');
+			// echo 'Regel is gelogd.<br/>';
 			return $result;
 		} catch (Exception $e) {
 			// Eventuele fouten loggen
 			error_log("Mail kon niet worden verzonden. Fout: {$mail->ErrorInfo}");
+			// echo "Mail kon niet worden verzonden. Fout: {$mail->ErrorInfo}<br/>";
+			// echo MAIL_SMTP_SERVER . '/' . MAIL_USERID . '/' . MAIL_PASSWORD;
 			return false;
 		}
 	}
-
+	
 	/**
 	 * Interne helperfunctie voor e-maillogging
 	 */
 	private static function logMailAction($emailTo, $subject, $success, $errorMessage = '')
 	{
+		// echo 'Start logging.<br/>';
 		$tijdstip = (new DateTime())->format('Y-m-d H:i:s');
 		$status   = $success ? 'OK' : 'FAILED';
 		$logregel = sprintf(
@@ -391,6 +425,7 @@ class Tools
 		}
 		$logBestand = $logMap . MAIL_LOGFILE;
 		file_put_contents($logBestand, $logregel, FILE_APPEND);
+		// echo $logregel . '<br/>';
 	}
 
 	public static function getKey($key)

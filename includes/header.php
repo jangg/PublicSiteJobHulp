@@ -44,8 +44,7 @@
 				<li><a href="/visie.php">Visie</a></li>
 				<li><a href="/organisatie.php">Organisatie</a></li>
 				<li><a href="/stichting.php">Stichting</a></li>
-				<!-- <li><a href="<?= LOC_DOMAIN_INTRA ?>">Intranet</a></li> -->
-				<li><a href="#">Intranet</a></li>
+				<li><a href="<?= LOC_WEBSITE_INTRA ?>">Intranet</a></li>
 			</ul>
 		</ul>
 		<i class="bi bi-list mobile-nav-toggle"></i>		

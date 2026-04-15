@@ -2,8 +2,9 @@
 /* een sessie blijft hoogstens 4 uur in de lucht. Daarna moet er opnieuw worden ingelogd */
 ini_set("session.cookie_lifetime","7200");
 session_start();
-require ('includes/configDB.php');
-include_once ('class/c_tools.php');
+require 'includes/configDB.php';
+require_once 'class/c_tools.php';
+
 error_reporting(E_ALL);
 setlocale(LC_ALL, 'nl_NL');
 
@@ -17,5 +18,5 @@ function openDB ()
 		// error_log('Het openen van de database lukt wel!');	
 	}
 }
-
+openDB();
 ?>

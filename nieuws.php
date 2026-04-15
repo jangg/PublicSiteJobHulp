@@ -24,16 +24,16 @@ foreach ($newsitemColl->newsitemColl as $newsitem)
 
       /* eerst foto altijd  */
       if ($newsitem->picfile1 != '')
-        $newsitemHTML .= '<img src="https://intra.jhmz.nl/img/' . $newsitem->picfile1 . '" class="m-0" style="height: 100%; object-fit: cover;"/>';
+        $newsitemHTML .= '<img src="https://' . LOC_DOMAIN_INTRA . '/img/' . $newsitem->picfile1 . '" class="m-0" style="height: 100%; object-fit: cover;"/>';
       if (str_word_count($newsitem->tekst_kort) > 100)  
       { /* tweede foto als de tekst langer is 100 woorden */
         if ($newsitem->picfile2 != '')
-          $newsitemHTML .= '<br/><img src="https://intra.jhmz.nl/img/' . $newsitem->picfile2 . '" class="m-0" style="height: 100%; object-fit: cover;"/>';
+          $newsitemHTML .= '<br/><img src="https://' . LOC_DOMAIN_INTRA . '/img/' . $newsitem->picfile2 . '" class="m-0" style="height: 100%; object-fit: cover;"/>';
       }
       if (str_word_count($newsitem->tekst_kort) > 200)  
       { /* derde foto als de tekst langer is 200 woorden*/
         if ($newsitem->picfile3 != '')
-          $newsitemHTML .= '<br/><img src="https://intra.jhmz.nl/img/' . $newsitem->picfile3 . '" class="m-0" style="height: 100%; object-fit: cover;"/>';
+          $newsitemHTML .= '<br/><img src="https://' . LOC_DOMAIN_INTRA . '/img/' . $newsitem->picfile3 . '" class="m-0" style="height: 100%; object-fit: cover;"/>';
       }
     $newsitemHTML .= '
             </div>

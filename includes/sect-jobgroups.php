@@ -6,14 +6,14 @@
 	 			<h3>Wat is een JobGroep?</h3>
 	 		</div>
 	 		<div class="row mb-4 g-5">
-	 			<div class="col-lg">
+	 			<div class="col-lg my-0">
 	 				<p>In een JobGroep krijg je in 8 bijeenkomsten van 90 minuten meer duidelijkheid over wie je bent, wat je wilt en wat je kunt. De bedoeling is om ervaringen uit te wisselen met andere deelnemers en elkaar een stap verder te helpen.</p>
 
 	 				<p>Iedereen, die op zoek is naar een (nieuwe) passende baan, of die zich wil oriënteren op nieuwe mogelijkheden, is van harte welkom! Ongeveer de helft van de deelnemers vindt tijdens of na de JobGroep zelfstandig een baan.</p>
 					 <p>Kan je nog wel wat extra hulp gebruiken na de JobGroep? Dan staan er getrainde JobMaatjes klaar om je verder te helpen, waarbij ze meer gedetailleerd kunnen inzoomen op jouw specifieke uitdagingen. Alles met hetzelfde doel: jou dichter bij je gewenste baan te brengen!</p>
 
 	 			</div>
-	 			<div class="col-lg">
+	 			<div class="col-lg my-0">
 
 	 				<p>In een aantal stappen werken we toe naar het einddoel van de bijeenkomsten: je presenteert jezelf kort en aansprekend waarbij je aangeeft wie je bent, wat je kunt en waar je naar op zoek bent. </p>
 					 <p>In de voorafgaande bijeenkomsten verzamel je de informatie die je nodig hebt om jezelf zelfverzekerd te presenteren. Na afloop van de JobGroep kijken we samen of je nog persoonlijk begeleid wil worden met een JobMaatje.</p>
@@ -26,7 +26,7 @@
 				<div class="col-lg-2"></div>
 	 			<div class="col-lg-8 d-flex align-items-stretch mb-5 mb-lg-0">
 					<div class="card px-lg-5" data-aos="fade-up" data-aos-delay="200">
-	 				<p>In 8 groepsbijeenkomsten werk je samen met de trainer en mededeelnemers aan stappen die de baan die bij je past dichterbij brengen. Wat kun je verwachten?:</p>
+	 				<p>In 8 groepsbijeenkomsten werk je samen met de trainer en mededeelnemers aan stappen die de baan die bij je past dichterbij brengen. Welke onderwerpen kun je onder andere verwachten?:</p>
 	 				<ol>
 	 					<li><span>Wie ben ik?</span> Inzicht krijgen in de waarden die belangrijk voor je zijn, in je werk en in je leven. Wat vind ik belangrijk in een nieuwe baan? Waar wil ik nog verder in groeien?</li>
 	 					<li><span>Wat kan ik?</span> Een beter beeld krijgen van je talenten en kwaliteiten. Wat zijn mijn sterke punten? Hoe kan ik deze concreet herkennen in specifieke situaties?</li>

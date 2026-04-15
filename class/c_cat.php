@@ -137,8 +137,8 @@ class Categorie
 			
 				$stmt = $connection->prepare( $sql );
 				$stmt->bindValue( ":id"				, NULL, PDO::PARAM_STR);
-				$stmt->bindValue( ":naam"		, htmlentities($this->naam, ENT_QUOTES, 'UTF-8'), PDO::PARAM_STR);
-				$stmt->bindValue( ":omschrijving"		, htmlentities($this->omschrijving, ENT_QUOTES, 'UTF-8'), PDO::PARAM_STR);
+				$stmt->bindValue( ":naam"		, $this->naam, PDO::PARAM_STR);
+				$stmt->bindValue( ":omschrijving"		, $this->omschrijving, PDO::PARAM_STR);
 				$stmt->execute();
 				//			 error_log('Een nieuwe c_person is toegevoegd');
 				$this->id = $connection->lastInsertId();
@@ -167,8 +167,8 @@ class Categorie
 			
 			$stmt = $connection->prepare( $sql );
 			$stmt->bindValue( ":id"				, $this->id, PDO::PARAM_STR);
-			$stmt->bindValue( ":naam"		, htmlentities($this->naam, ENT_QUOTES, 'UTF-8'), PDO::PARAM_STR);
-			$stmt->bindValue( ":omschrijving"		, htmlentities($this->omschrijving, ENT_QUOTES, 'UTF-8'), PDO::PARAM_STR);
+			$stmt->bindValue( ":naam"		, $this->naam, PDO::PARAM_STR);
+			$stmt->bindValue( ":omschrijving"		, $this->omschrijving, PDO::PARAM_STR);
 			$stmt->bindValue( ":nbrTopics"		, $this->nbrTopics, PDO::PARAM_STR);
 			$stmt->bindValue( ":nbrPosts"		, $this->nbrPosts, PDO::PARAM_STR);
 			$stmt->execute();

@@ -3,15 +3,15 @@
  <div class="container" data-aos="zoom-out" data-aos-delay="100" style="z-index: 3;">
 	<div  class="upper"></div>
 	<div class="row">
-		<h1 class="col-lg-12 d-none d-xl-block my-4" style="font-size: 4em;">Wil je ons helpen met een bijdrage?</span></h1>
-		<h1 class="col-lg-12 d-none d-xl-block my-4" style="font-size: 4em;">Welkom bij <span><?= LOC_NAME ?></span></h1>
-		<h1 class="col-lg-12 d-xl-none my-1" style="font-size: 2em;">Wij helpen Culemborg aan werk. Maar niet zonder jouw steun.</span></h1>
-		<h1 class="col-lg-12 d-xl-none my-1" style="font-size: 2em;">Welkom bij <span><?= LOC_NAME ?></span></h1>
+		<h1 class="col-lg-12 d-none d-xl-block my-4" style="font-size: 4em;">Wilt u het werk van JobHulp Culemborg ondersteunen met een financiële bijdrage?</h1>
+		<!-- <h1 class="col-lg-12 d-none d-xl-block my-4" style="font-size: 4em;">Welkom bij <span><?= LOC_NAME ?></h1> -->
+		<h1 class="col-lg-12 d-xl-none my-1" style="font-size: 2em;">Wilt u het werk van JobHulp Culemborg ondersteunen met een financiële bijdrage?</h1>
+		<!-- <h1 class="col-lg-12 d-xl-none my-1" style="font-size: 2em;">Welkom bij <span><?= LOC_NAME ?></span></h1> -->
 		<h2 class="my-5">Ook een vrijwilligersorganisatie heeft geld nodig.</h2>
 		<div class="d-flex"><a href="mailto: bestuur@<?= LOC_DOMAIN ?>" class="btn-get-started">Mail ons!</a></div>
 	</div>
  </div>
- <!-- <div class="sidebar" data-aos="zoom-out" data-aos-delay="1000" >
+ <div class="sidebar" data-aos="zoom-out" data-aos-delay="1000" style="z-index: 5;">
 	 <div  class="upper-sidebar"></div>
 	 <div class="upper-link upper-link-l d-none d-xl-block">
 	 	<a href="werkzoekende/index.php"><span style="font-size: 2em;">Werkzoeker? <i class="far fa-hand-point-right"></i><br/></span></a>
@@ -23,5 +23,5 @@
 		<a href="vrijwilliger/index.php"><span style="font-size: 1em;">Vrijwilliger? <i class="far fa-hand-point-right"></i><br/></span></a>
 		<a href="werkgever/index.php"><span style="font-size: 1em;">Werkgever? <i class="far fa-hand-point-right"></i></span></a>
 	</div>
- </div> -->
+ </div>
 </section><!-- End Hero -->

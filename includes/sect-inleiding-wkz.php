@@ -6,12 +6,12 @@
 			<h3><?= LOC_NAME ?> helpt je bij het zoeken naar werk.</h3>
 		</div>
 		<div class="row g-5">
-			<div class="col-lg">
+			<div class="col-lg my-0">
 				<p><?= LOC_NAME ?> is uniek omdat we aandacht schenken aan praktische zaken, maar ook aandacht hebben voor jou als persoon en jouw omgeving.</p>
 				<!-- <p>Meer weten? <?= LOC_NAME ?> is <strong>elke donderdagmiddag</strong> aanwezig in het Forum, aan de balie op het plein Mens en Maatschappij. 
 				Loop eens langs!</p> -->
 			</div>
-			<div class="col-lg">
+			<div class="col-lg my-0">
 
 				<p>Kennismaken?</p> 
 					<!-- <strong>Elke vrijdagochtend</strong> zijn er de netwerkbijeenkomsten “SolliciterenNu NetWerken”.</p>
