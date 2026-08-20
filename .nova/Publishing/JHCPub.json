@@ -1,0 +1,12 @@
+{
+  "identifier" : "87E2C613-C69E-4640-9DBF-A54E17AF5872",
+  "ignoredFilePatterns" : [
+    "configDB.php",
+    "img"
+  ],
+  "localPath" : ".",
+  "remotePath" : "\/domains\/jobhulpculemborg.nl\/public_html",
+  "remoteURL" : "https:\/\/jobhulpculemborg.nl",
+  "server" : "JHCpub",
+  "usesPublishing" : true
+}

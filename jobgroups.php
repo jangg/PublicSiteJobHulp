@@ -66,7 +66,7 @@
                     <p>Als je als werkzoekende er alleen voor staat, kan een maatje die je helpt en steunt een uitkomst zijn. Je maatje kijkt met je mee, geeft je tips en praat je moed in. Precies wat je nodig hebt
                       bij je zoektocht naar nieuw werk.
                     </p>
-                    <p><?= LOC_NAME ?> beschikt over veel vrijwilligers die werkzoekers kunnen bij staan in hun zoektocht.</p>
+                    <p><?= LOC_NAME ?> beschikt over veel vrijwilligers die werkzoekenden kunnen bij staan in hun zoektocht.</p>
                   </div>
                 </div>
               </li>
@@ -78,7 +78,7 @@
                     <p class="fst-italic">Korte uitleg</p>
                     <h4>Voldoe aan bepaalde criteria</h4>
                     <p>Om een maatje te zijn moet iemand aan bepaalde voorwaarden voldoen. Sommige zijn goed te bepalen, andere wat lastiger omdat ze moeilijk meetbaar zijn.</p>
-                    <p>Zo moet je woonachtig zijn in Culemborg of in de omgeving van Culemborg. De werkzoekers komen immers ook uit deze omgeving.</p>
+                    <p>Zo moet je woonachtig zijn in Culemborg of in de omgeving van Culemborg. De werkzoekenden komen immers ook uit deze omgeving.</p>
                     <p>Je moet 18 jaar of ouder zijn.</p>
                     <p>Je moet goed Nederlands spreken en schrijven.</p>
                     <p>Je moet beschikken over de gewenste sociale vaardigheden, zoals empathie, inlevingsvermogen en geduld.</p>

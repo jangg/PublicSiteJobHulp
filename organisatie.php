@@ -89,7 +89,7 @@ require_once ('config.php');
                   <p>Waar mogelijk proberen wij ook, via onze netwerken, de werkzoekende in contact te brengen met mensen die hen misschien een stapje verder kunnen brengen.</p>
                   
                   <p>Wat JobHulp Culemborg niet doet, is bemiddelen tussen de werkzoekende en mogelijke werkgevers of meegaan op sollicitatiebezoek. En ook schrijft JobHulp Culemborg geen brieven of e-mails. Uiteindelijk moet de werkzoekende zelf aan de slag om een baan te vinden. De grondregel is dat de werkzoekende zelf verantwoordelijk is en blijft voor het slagen (of niet slagen) van de zoektocht.</p>
-                  <p>De grondregel is dat de werkzoeker te allen tijde zelf verantwoordelijk blijft voor het slagen (of niet slagen) van de zoektocht.
+                  <p>De grondregel is dat de werkzoekendete allen tijde zelf verantwoordelijk blijft voor het slagen (of niet slagen) van de zoektocht.
                 </div>
               </li>
 

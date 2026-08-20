@@ -1,7 +1,7 @@
 <main id="main">
 	 <!-- <main id="main"> -->
 
-	 <!-- ======= Inleiding werkzoekers Section ======= -->
+	 <!-- ======= Inleiding werkzoekenden Section ======= -->
 	 <section id="werk" class="section-one">
 		<div class="container" data-aos="fade-up">
 		  <div class="section-title">
@@ -56,7 +56,7 @@
 			 <div class="row mb-4 g-5">
 				<div class="col-lg">
 			 <p>JobHulpMaatje brengt jouw sollicitatievaardigheden naar een hoger niveau. 
-				Zoals een sporttrainer de sporter traint om z'n prestaties te verhogen, zo traint JobHulpMaatje de werkzoeker om het sollicitatieproces beter onder de knie te krijgen.</p>
+				Zoals een sporttrainer de sporter traint om z'n prestaties te verhogen, zo traint JobHulpMaatje de werkzoekendeom het sollicitatieproces beter onder de knie te krijgen.</p>
 				</div>
 				<div class="col-lg">
 			 

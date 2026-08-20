@@ -1,4 +1,4 @@
-	 <!-- ======= Inleiding werkzoekers Section ======= -->
+	 <!-- ======= Inleiding werkzoekenden Section ======= -->
 	 <section id="helpalsmaatje" class="<?php echo (Tools::sectOne() ? 'section-one' : 'section-two'); ?>">
 	 	<div class="container" data-aos="fade-up">
 	 		<div class="section-title">

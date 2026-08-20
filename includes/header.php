@@ -36,6 +36,7 @@
 				<li style="background-color: #b19ec4;"><a href="/aanmelden.php">Aanmelden</a></li>
 			</ul>
 			</li>
+			<li><a id="a_sucstor" class="nav-link scrollto" href="/sucstor.php">Succesverhalen</a></li>
 			<li><a id="a_nieuws" class="nav-link scrollto" href="/nieuws.php">Nieuws</a></li>
 			<li><a class="nav-link scrollto" href="/index.php#contact">Contact</a></li>
 			<li class="dropdown"><a id="a_over" class="navlink scrollto" href="#"><span>Over <?php echo LOC_NAME; ?></span> <i class="bi bi-caret-down-square"></i></a>

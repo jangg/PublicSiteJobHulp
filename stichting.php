@@ -63,9 +63,9 @@ require_once 'config.php';
             Email: <a href="mailto:info@jobhulpculemborg.nl">info@jobhulpculemborg.nl</a><br/><br/>
             Het onbezoldigde bestuur van stichting JobHulp Culemborg wordt gevormd door:</p>
             <ul style="text-align: left; font-size: 1.2em;">
-              <li>Voorzitter: Dhr. Rien van der Veer</li>
-              <li>Vice-voorzitter: Mevr. Judith Tijdink</li>
-              <li>Secretaris: Dhr. Wim de Haas</li>
+              <li>Voorzitter: Dhr. Wim de Haas</li>
+              <li>Secretaris: Mevr. Judith Tijdink</li>
+              <li>Bestuurslid: Dhr. Rien van der Veer</li>
               <li>Penningmeester: Mevr. Bojana Vasi&cacute;</li>  <!-- Vaci&ccedil; -->
             </ul>
           </div>

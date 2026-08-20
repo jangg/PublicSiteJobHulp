@@ -26,7 +26,7 @@ function jobgroupHTML($agendaitem)
   $agenda_html .=
     '<div class="card bg-light mb-4">
     <!-- <img src="..." class="card-img-top" alt="..."> -->
-      <div class="card-header jg-header text-light">JobGroup ' .
+      <div class="card-header jg-header text-light">JobGroep ' .
     strftime("%A %e %B %Y", $datum->getTimestamp()) .
     '</div>
       <div class="card-header text-dark">' .
@@ -415,10 +415,10 @@ foreach ($agenda as $agendaitem) {
     <section id="hero" class="d-flex align-items-center" style="height: 30vh;">
       <div id="overlay"></div>
       <div class="container" data-aos="zoom-out" data-aos-delay="100" style="z-index: 3;">
-        <h1 class="col-lg-12 d-none d-xl-block my-4" style="font-size: 6em;">Agenda</span></h1>
-        <h1 class="col-lg-12 d-none d-xl-block my-4" style="font-size: 3em;">Welkom bij <span><?= LOC_NAME ?></span></h1>
-        <h1 class="col-lg-12 d-xl-none my-1" style="font-size: 3em;">Agenda</span></h1>
-        <h1 class="col-lg-12 d-xl-none my-1" style="font-size: 1.5em;">Welkom bij <span><?= LOC_NAME ?></span></h1>
+        <h1 class="col-lg-12 d-none d-xl-block my-4" style="font-size: 6em; color: purple;">Agenda</span></h1>
+        <h1 class="col-lg-12 d-none d-xl-block my-4" style="font-size: 3em; color: purple;">Welkom bij <span><?= LOC_NAME ?></span></h1>
+        <h1 class="col-lg-12 d-xl-none my-1" style="font-size: 3em; color: purple;">Agenda</span></h1>
+        <h1 class="col-lg-12 d-xl-none my-1" style="font-size: 1.5em; color: purple;">Welkom bij <span><?= LOC_NAME ?></span></h1>
         <!-- <h2 class="my-5">Als je op zoek bent naar werk en je kunt wat hulp gebruiken</h2> -->
       </div>
      </section><!-- End Hero -->
